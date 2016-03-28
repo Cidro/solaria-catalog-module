@@ -1,0 +1,21 @@
+{
+    "name": "asimov/solaria/modules/catalog",
+    "description": "Catalogo de productos para Sitio Gtd con CMS solaria",
+    "license": "MIT",
+    "keywords": ["catalog", "solaria", "asimov"],
+    "authors": [
+        {
+            "name": "Pablo Canales",
+            "email": "pablo@asimov.cl"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "laravel/framework": "5.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Asimov\\Solaria\\Modules\\Catalog\\": "src/"
+        }
+    }
+}
