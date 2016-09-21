@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddModuleCatalogProductsTable extends Migration
+class AddModuleCatalogAttributesGroupsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,12 @@ class AddModuleCatalogProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create('module_ctalog_product_data', function (Blueprint $table) {
+        Schema::create('module_catalog_attributes_groups', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('product_id')->unsigned();
+            $table->integer('site_id')->unsigned();
             $table->timestamps();
 
-            $table->foreign('product_id')->references('id')->on('module_ctalog_products')->onDelete('cascade');
+            $table->foreign('site_id')->references('id')->on('sites')->onDelete('cascade');
         });
     }
 
@@ -28,6 +28,6 @@ class AddModuleCatalogProductsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('module_ctalog_product_data');
+        Schema::drop('module_catalog_attributes_groups');
     }
 }

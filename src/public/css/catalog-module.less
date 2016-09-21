@@ -1,13 +1,13 @@
 .location-list {
   padding: 0 0 0 12px;
   list-style: none;
-}
-.location-list li {
-  padding: 0 0 0 25px;
-  margin: 4px 0;
-}
-.location-list li.has-children {
-  padding: 0 0 0 7px;
+  li {
+    padding: 0 0 0 25px;
+    margin: 4px 0;
+    &.has-children {
+      padding: 0 0 0 7px;
+    }
+  }
 }
 .ui-select-multiple.ui-select-bootstrap {
   padding: 5px 3px 1px;
@@ -15,6 +15,6 @@
 .glyphicon-catalogo:before {
   content: "\e040";
 }
-.tab-content-module-catalog {
+.tab-content-module-catalog{
   padding-bottom: 250px;
 }
